@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hugooeditor | Videomaker, Web Dev & Social Media</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS CSS para animações de rolagem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a href="https://wa.me/5516991353649" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <a href="#inicio">
+            <img src="./Imagens/logo.PNG" alt="Logo Vitor Hugo" class="logo-img">
+        </a>
+    </div>
+    
+    <div class="menu-toggle" id="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <nav class="nav-menu">
+        <a href="#inicio" onclick="closeMenu()">Início</a>
+        <a href="#portfolio" onclick="closeMenu()">Portfólio</a>
+        <a href="#sobre" onclick="closeMenu()">Sobre Mim</a>
+        <a href="#servicos" onclick="closeMenu()">Serviços</a>
+        <a href="#orcamento" onclick="closeMenu()">Orçamento</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+    <video autoplay muted loop playsinline webkit-playsinline class="hero-video">
+        <source src="./Imagens/videoloop.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos de fundo.
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+        <span class="tag">Videomaker • Web Dev • Social Media</span>
+        <h1>CONTANDO HISTÓRIAS, ETERNIZANDO MOMENTOS E ESCALANDO MARCAS.</h1>
+        <p>Transformo momentos reais em produções audiovisuais cinematográficas, desenvolvo sites de alta performance e gerencio redes sociais com foco em resultados.</p>
+        <a href="#orcamento" class="btn">Solicitar Orçamento</a>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="portfolio-section" id="portfolio">
+    <div data-aos="fade-up">
+        <span class="tag">Portfólio</span>
+        <h2>Alguns dos Meus Trabalhos</h2>
+        <p class="section-desc">Explore algumas das produções e projetos desenvolvidos recentemente.</p>
+    </div>
+
+  <!-- CARDS PRINCIPAIS -->
+    <div class="portfolio-grid">
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100" onclick="toggleReels('eventos')" style="background-image: url('./Imagens/Portfolio/Eventofoto.jpeg');">
+            <div class="card-overlay"></div>
+            <div class="video-overlay-card">▶</div>
+            <h3>Eventos Sociais</h3>
+            <p>Aniversários e comemorações marcantes.</p>
+        </div>
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200" onclick="toggleReels('comerciais')" style="background-image: url('./Imagens/Portfolio/Comerfoto.jpeg');">
+            <div class="card-overlay"></div>
+            <div class="video-overlay-card">▶</div>
+            <h3>Vídeos Comerciais</h3>
+            <p>Campanhas publicitárias e reels dinâmicos.</p>
+        </div>
+        <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300" onclick="toggleReels('institucionais')" style="background-image: url('./Imagens/Portfolio/Institufoto.jpeg');">
+            <div class="card-overlay"></div>
+            <div class="video-overlay-card">▶</div>
+            <h3>Institucionais</h3>
+            <p>Conteúdos corporativos e apresentação de empresas.</p>
+        </div>
+    </div>
+
+    <div id="reels-container" class="reels-container">
+        
+        <!-- Categoria: Eventos Sociais -->
+        <div id="reels-eventos" class="reels-grid">
+            <div class="reel-item">
+                <video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/evento1.mp4"></video>
+                <div class="reel-info"><span>Evento</span></div>
+            </div>
+            <div class="reel-item horizontal-preview">
+                <video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/evento2.mp4"></video>
+                <div class="reel-info"><span>Evento</span></div>
+            </div>
+            <div class="reel-item horizontal-preview">
+                <video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/evento3.mp4"></video>
+                <div class="reel-info"><span>Evento</span></div>
+            </div>
+            <div class="reel-item horizontal-preview">
+                <video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/evento4.mp4"></video>
+                <div class="reel-info"><span>Evento</span></div>
+            </div>
+        </div>
+
+        <!-- Categoria: Vídeos Comerciais -->
+        <div id="reels-comerciais" class="reels-grid">
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Hust2.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Mergarimpo2.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Seucirineu1.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Hust5.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Mergarimpo1.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Lucas lanche.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Hust1.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Hust3.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Seucirineu5.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/lucaslanche3.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Seucirineu4.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Hust4.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/lucaslanche2.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Mergarimpo3.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+            <div class="reel-item"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/lucaslanche4.mp4"></video><div class="reel-info"><span>Reels Comercial</span></div></div>
+        </div>
+
+        <!-- Categoria: Institucionais -->
+        <div id="reels-institucionais" class="reels-grid">
+            <div class="reel-item horizontal-preview"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/newpoint1.mp4"></video><div class="reel-info"><span>Vídeo Institucional</span></div></div>
+            <div class="reel-item horizontal-preview"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/newpoint2.mp4"></video><div class="reel-info"><span>Vídeo Institucional</span></div></div>
+            <div class="reel-item horizontal-preview"><video autoplay muted loop playsinline webkit-playsinline src="./Imagens/Portfolio/Seucirineu2.mp4"></video><div class="reel-info"><span>Vídeo Institucional</span></div></div>
+        </div>
+
+    </div>
+</section>
+
+<!-- SOBRE MIM -->
+<section class="sobre" id="sobre">
+    <div class="sobre-overlay"></div>
+    <div class="sobre-container">
+        <div class="sobre-text" data-aos="fade-right">
+            <span class="tag">Sobre Mim</span>
+            <h2>Vitor Hugo</h2>
+            <p>Sou apaixonado pelo mundo do marketing e atuo com produção de conteúdo, audiovisual, estratégias de social media e desenvolvimento web. Com 18 anos e morando em Batatais–SP, criei este site para reunir meus principais trabalhos e mostrar como ajudo marcas a se posicionarem com força e profissionalismo no digital.</p>
+            <div class="skills-tags">
+                <span>Videomaker</span>
+                <span>Edição de Vídeo</span>
+                <span>Social Media</span>
+                <span>Desenvolvimento WEB</span>
+            </div>
+        </div>
+
+        <div class="sobre-video-box" data-aos="fade-left">
+            <video autoplay muted loop playsinline webkit-playsinline>
+                <source src="./Imagens/VideoVitor.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section class="servicos" id="servicos">
+    <div data-aos="fade-up">
+        <span class="tag">O Que Faço</span>
+        <h2>Soluções Completas para a sua Marca</h2>
+    </div>
+    <div class="grid">
+        <div class="service" data-aos="fade-up" data-aos-delay="100">
+            <h3>🎥 Captação de Vídeo</h3>
+            <p>Gravação profissional com equipamentos de ponta para eventos e marcas.</p>
+        </div>
+        <div class="service" data-aos="fade-up" data-aos-delay="200">
+            <h3>🎬 Edição & Pós-Produção</h3>
+            <p>Montagem dinâmica, cortes modernos e ritmo cinematográfico.</p>
+        </div>
+        <div class="service" data-aos="fade-up" data-aos-delay="300">
+            <h3>🎨 Color Grading</h3>
+            <p>Tratamento de cor profissional para dar identidade e atmosfera única aos vídeos.</p>
+        </div>
+        <div class="service" data-aos="fade-up" data-aos-delay="400">
+            <h3>🌐 Desenvolvimento de Sites</h3>
+            <p>Criação de sites modernos, responsivos e focados em conversão e autoridade de marca.</p>
+        </div>
+        <div class="service" data-aos="fade-up" data-aos-delay="500">
+            <h3>📱 Social Media Profissional</h3>
+            <p>Planejamento estratégico, identidade visual e gestão completa de redes sociais para destacar seu negócio.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- FAQ / PERGUNTAS FREQUENTES -->
+<section class="faq-section" id="faq">
+    <div data-aos="fade-up">
+        <span class="tag">Dúvidas Frequentes</span>
+        <h2>Perguntas Comuns</h2>
+        <p class="section-desc">Tudo o que você precisa saber antes de iniciar o seu projeto.</p>
+    </div>
+
+    <div class="faq-container">
+        <!-- Pergunta 1 -->
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+            <button class="faq-question">
+                <span>Quanto tempo demora para entregar um vídeo comercial, institucional ou evento?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>O prazo varia conforme o tipo de conteúdo. Para reels e vídeos institucionais, o prazo médio é de 3 dias úteis. No caso de coberturas completas como casamentos, o prazo é de até 10 dias úteis para a entrega de todo o material finalizado, sempre priorizando o mais alto padrão de qualidade.</p>
+            </div>
+        </div>
+
+        <!-- Pergunta 2 -->
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+            <button class="faq-question">
+                <span>Você atende fora de Batatais para projetos ou cobertura de eventos?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Sim, realizamos projetos e coberturas fora da cidade sempre que necessário. Nesses casos, apenas alinhamos previamente os detalhes logísticos e de deslocamento antes de iniciar o atendimento.</p>
+            </div>
+        </div>
+
+        <!-- Pergunta 3 -->
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+            <button class="faq-question">
+                <span>Como funciona o contrato, o pagamento e o formato de sinal?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Trabalhamos com contrato formal para garantir um relacionamento transparente e seguro para ambas as partes. O formato de pagamento é dividido em duas etapas de 50%: um sinal no início para dar start no projeto e os 50% restantes quitados apenas na entrega final.</p>
+            </div>
+        </div>
+
+        <!-- Pergunta 4 -->
+        <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+            <button class="faq-question">
+                <span>O site desenvolvido é totalmente adaptado para celulares (mobile)?</span>
+                <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+                <p>Com certeza. Considerando a alta demanda do mercado atual por acessos via smartphone, todos os sites são projetados e rigorosamente adaptados para garantir uma experiência mobile fluida, rápida e focada em conversão para o seu negócio.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ORÇAMENTO -->
+<section class="orcamento" id="orcamento">
+    <div data-aos="fade-up">
+        <span class="tag">Contato Direto</span>
+        <h2>Vamos Trabalhar Juntos?</h2>
+    </div>
+    
+    <form id="orcamento-form" data-aos="zoom-in" data-aos-duration="600">
+        <input type="text" id="nome-cliente" placeholder="Seu nome" required>
+        <input type="tel" id="whatsapp-cliente" placeholder="Seu WhatsApp" required>
+        
+        <select id="servico-cliente" required>
+            <option value="">Escolha o serviço desejado</option>
+            <option value="Cobertura de Evento">Cobertura de Evento</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Vídeo Comercial / Reels">Vídeo Comercial / Reels</option>
+            <option value="Edição de Vídeo">Edição de Vídeo</option>
+            <option value="Desenvolvimento de Site">Desenvolvimento de Site</option>
+            <option value="Projeto Personalizado">Projeto Personalizado</option>
+        </select>
+
+        <textarea id="mensagem-cliente" placeholder="Conte mais sobre seu projeto..."></textarea>
+        <button type="submit">Enviar Solicitação no WhatsApp</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer id="contato">
+    <div class="footer-logo">
+        <span class="logo-text">@HUGOOEDITOR_</span>
+    </div>
+    <p>© 2026 Hugooeditor - Todos os direitos reservados.</p>
+    <div class="rodape-gradiente"></div>
+</footer>
+
+<!-- Biblioteca AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="Script.js"></script>
+</body>
+</html>
